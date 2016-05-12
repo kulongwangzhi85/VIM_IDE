@@ -1,0 +1,48 @@
+[submodule "ack.vim"]
+	path = ack.vim
+	url = ./ack.vim/
+[submodule "AutoClose"]
+	path = AutoClose
+	url = ./AutoClose/
+[submodule "ctrlp.vim"]
+	path = ctrlp.vim
+	url = ./ctrlp.vim/
+[submodule "emmet-vim"]
+	path = emmet-vim
+	url = ./emmet-vim/
+[submodule "indentLine"]
+	path = indentLine
+	url = ./indentLine/
+[submodule "jedi-vim"]
+	path = jedi-vim
+	url = ./jedi-vim/
+[submodule "nerdcommenter"]
+	path = nerdcommenter
+	url = ./nerdcommenter/
+[submodule "python-mode"]
+	path = python-mode
+	url = ./python-mode/
+[submodule "vim-airline"]
+	path = vim-airline
+	url = ./vim-airline
+[submodule "vim-airline-themes"]
+	path = vim-airline-themes
+	url = ./vim-airline-themes/
+[submodule "vim-colors-solarized"]
+	path = vim-colors-solarized
+	url = ./vim-colors-solarized/
+[submodule "vim-markdown"]
+	path = vim-markdown
+	url = ./vim-markdown/
+[submodule "vim-monokai-refined"]
+	path = vim-monokai-refined
+	url = ./vim-monokai-refined/
+[submodule "vim-sensible"]
+	path = vim-sensible
+	url = ./vim-sensible/
+[submodule "vim-surround"]
+	path = vim-surround
+	url = ./vim-surround/
+[submodule "YouCompleteMe"]
+	path = YouCompleteMe
+	url = ./YouCompleteMe/
