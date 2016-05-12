@@ -5,6 +5,9 @@
 
 ##**效果图**
 ![VIM-IDE01](https://github.com/kulongwangzhi85/VIM_IDE/blob/master/img/vim_ide01.png)
+![VIM-IDE2](https://github.com/kulongwangzhi85/VIM_IDE/blob/master/img/vi)
+![VIM-IDE3](https://github.com/kulongwangzhi85/VIM_IDE/blob/master/img/vim-ide3.png)]
+
 
 ##**特点**
 > - 配合tmux使用，需要将tmux.conf配置文件链接到home目录

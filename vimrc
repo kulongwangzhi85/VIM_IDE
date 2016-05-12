@@ -149,3 +149,7 @@ let g:jedi#force_py_version = 2
 let g:jedi#popup_select_first = 0
 let g:jedi#completions_enabled = 1
 let g:jedi#show_call_signatures_delay = 0
+
+"au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=mkd
+let g:vim_markdown_folding_disabled=1
+let g:instant_markdown_slow = 1
