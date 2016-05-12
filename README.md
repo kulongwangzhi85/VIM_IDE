@@ -8,6 +8,6 @@
 ![VIM-IDE3](https://github.com/kulongwangzhi85/VIM_IDE/blob/master/img/vim-ide2.png)
 ![VIM-IDE3](https://github.com/kulongwangzhi85/VIM_IDE/blob/master/img/vim-ide3.png)
 
-
+---
 ##**特点**
 > - 配合tmux使用，需要将tmux.conf配置文件链接到home目录

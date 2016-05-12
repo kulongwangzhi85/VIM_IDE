@@ -24,7 +24,7 @@
 	url = ./vim-colors-solarized/
 [submodule "vim-markdown"]
 	path = vim-markdown
-	url = ./vim-markdown/
+	url = ./vim-markdown
 [submodule "vim-monokai-refined"]
 	path = vim-monokai-refined
 	url = ./vim-monokai-refined/

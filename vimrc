@@ -150,6 +150,7 @@ let g:jedi#popup_select_first = 0
 let g:jedi#completions_enabled = 1
 let g:jedi#show_call_signatures_delay = 0
 
-"au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=mkd
-let g:vim_markdown_folding_disabled=1
-let g:instant_markdown_slow = 1
+au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}
+	     let g:vim_markdown_folding_disabled = 1 | "markdown代码折叠 
+	     let g:vim_markdown_conceal = 1 | "markdown代码隐藏 
+	     let g:AutoClosePairs_del = "[" "由于vim-autoclose插件原因会在图片等位置自动插入’】” 
