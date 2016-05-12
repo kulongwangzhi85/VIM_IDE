@@ -40,3 +40,6 @@
 [submodule "vim-autoclose"]
 	path = vim-autoclose
 	url = ./vim-autoclose
+[submodule "ctrlp.vim"]
+	path = ctrlp.vim
+	url = ./ctrlp.vim/
