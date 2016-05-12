@@ -1,6 +1,3 @@
-[submodule "ctrlp.vim"]
-	path = ctrlp.vim
-	url = ./ctrlp.vim/
 [submodule "emmet-vim"]
 	path = emmet-vim
 	url = ./emmet-vim/
