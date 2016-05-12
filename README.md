@@ -4,9 +4,9 @@
 >在使用此IDE时，只需克隆本仓库到本地，并稍作配置即可。
 
 ##**效果图**
-![VIM-IDE01](https://github.com/kulongwangzhi85/VIM_IDE/blob/master/img/vim_ide01.png)
+![VIM-IDE1](https://github.com/kulongwangzhi85/VIM_IDE/blob/master/img/vim_ide01.png)
 ![VIM-IDE2](https://github.com/kulongwangzhi85/VIM_IDE/blob/master/img/vi)
-![VIM-IDE3](https://github.com/kulongwangzhi85/VIM_IDE/blob/master/img/vim-ide3.png)]
+![VIM-IDE3](https://github.com/kulongwangzhi85/VIM_IDE/blob/master/img/vim-ide3.png)
 
 
 ##**特点**
