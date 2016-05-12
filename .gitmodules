@@ -1,9 +1,3 @@
-[submodule "ack.vim"]
-	path = ack.vim
-	url = ./ack.vim/
-[submodule "AutoClose"]
-	path = AutoClose
-	url = ./AutoClose/
 [submodule "ctrlp.vim"]
 	path = ctrlp.vim
 	url = ./ctrlp.vim/
@@ -46,3 +40,6 @@
 [submodule "YouCompleteMe"]
 	path = YouCompleteMe
 	url = ./YouCompleteMe/
+[submodule "vim-autoclose"]
+	path = vim-autoclose
+	url = ./vim-autoclose
