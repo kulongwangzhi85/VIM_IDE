@@ -5,7 +5,7 @@
 
 ##**效果图**
 ![VIM-IDE1](https://github.com/kulongwangzhi85/VIM_IDE/blob/master/img/vim_ide01.png)
-![VIM-IDE2](https://github.com/kulongwangzhi85/VIM_IDE/blob/master/img/vi)
+![VIM-IDE3](https://github.com/kulongwangzhi85/VIM_IDE/blob/master/img/vim-ide2.png)
 ![VIM-IDE3](https://github.com/kulongwangzhi85/VIM_IDE/blob/master/img/vim-ide3.png)
 
 
