@@ -4,7 +4,7 @@
 >在使用此IDE时，只需克隆本仓库到本地，并稍作配置即可。
 
 ##**效果图**
-![VIM-IDE01](https://github.com/kulongwangzhi85/VIM_IDE/blob/master/img/vim_ide01.png)]
+![VIM-IDE01(https://github.com/kulongwangzhi85/VIM_IDE/blob/master/img/vim_ide01.png)]
 
 ##**特点**
 > - 配合tmux使用，需要将tmux.conf配置文件链接到home目录
