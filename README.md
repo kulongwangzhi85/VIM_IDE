@@ -19,6 +19,7 @@
 > - nerdcommenter - 快速注释
 > - vim-airline、vim-airline-themes、vim-colors-solarized、vim-monokai-refined - 美化vim
 > - vim-surround - 用于扩展标点符号的使用，包括: (),[],{},<>,',"等
+
 ##**安装**
 > 0 查看vim版本，并且是否支持Python
 >> - 进入vim编辑器使用:version查看版本，并且确认是否支持Python2或Python3.如果不支持，请查看系统是否装有其它版本才vim
