@@ -21,7 +21,7 @@
 > - vim-surround - 用于扩展标点符号的使用，包括: (),[],{},<>,',"等
 
 ##**安装**
-> 0. 查看vim版本，并且是否支持Python
-> > - 进入vim编辑器使用:version查看版本，并且确认是否支持Python2或Python3.如果不支持，请查看系统是否装有其它版本才vim
-> > - ubuntu系统执行update-alternatives --config vim,查看是否由其它版本的vim.我这系统就有好几个版本。有点支持，有点不支持
-> 1. 使用系统命令apt-get install 安装pathogen插件，并执行vim-addon-manager install pathogen安装到vim
+> - 查看vim版本，并且是否支持Python
+> - 进入vim编辑器使用:version查看版本，并且确认是否支持Python2或Python3.如果不支持，请查看系统是否装有其它版本才vim
+> -  ubuntu系统执行update-alternatives --config vim,查看是否由其它版本的vim.我这系统就有好几个版本。有点支持，有点不支持
+> -  使用系统命令apt-get install 安装pathogen插件，并执行vim-addon-manager install pathogen安装到vim
