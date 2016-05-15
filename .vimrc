@@ -1,9 +1,7 @@
-"vimrc
-"markdown
-"au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}
-au BufNewFile,BufRead *.md let g:AutoClosePairs = "() {} <> \" \'" "由于写markdown会有写小问题，这里去掉了'['符号的匹配
-au BufNewFile,BufRead *.md let g:vim_markdown_conceal=0 "不要隐藏markdown文本 
-au BufNewFile,BufRead *.md let g:vim_markdown_folding_disabled=1 "不要折叠markdown文本 
+""vimrc
+""markdown
+"au BufNewFile,BufRead *.md let g:vim_markdown_conceal=0 "不要隐藏markdown文本 
+"au BufNewFile,BufRead *.md let g:vim_markdown_folding_disabled=1 "不要折叠markdown文本 
 
 let g:ycm_filetype_blacklist = {
       \ 'tagbar' : 1,
@@ -28,7 +26,8 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix |
     \ set tags+=./tags |
-    \ ab ,py- #!/usr/bin/python2.7 |
+    \ set omnifunc=jedi#completions |
+    \ ab .py- #!/usr/bin/python2.7 |
 
 au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2 |
@@ -36,6 +35,13 @@ au BufNewFile,BufRead *.js,*.html,*.css
     \ set shiftwidth=2 |
     \ set autoindent |
     \ set smartindent |
+
+
+"" HTML/CSS
+let g:user_emmet_install_global = 0
+au BufNewFile,BufRead,FileType html,css EmmetInstall
+au BufNewFile,BufRead *.html set omnifunc=htmlcomplete#CompleteTags
+au BufNewFile,BufRead *.css set omnifunc=cssmplete#CompleteCSS
 
 if exists('$TMUX')
   set term=screen-256color
@@ -54,7 +60,6 @@ set wrap
 set encoding=utf-8
 syntax enable
 syntax on
-filetype on
 filetype plugin indent on
 let g:mapleader = ","
 inoremap <C-j> <down>
@@ -62,27 +67,27 @@ inoremap <C-k> <up>
 inoremap <C-h> <left>
 inoremap <C-l> <right>
 
-"pathogen
+""pathogen
 execute pathogen#infect()
 
 "YouCompleteMe
 "set omnifunc=youcompleteme#OmniComplete
 set completeopt-=preview
 let g:ycm_key_invoke_completion = '<leader><TAB>'
-let g:pymode_rope_complete_on_dot = 0
-let g:pymode_rope_completion = 0
-"let g:ycm_server_log_level = 'debug'
-let g:ycm_use_ultisnips_completer=0
-let g:ycm_complete_in_comments=1
-let g:ycm_complete_in_strings=1 
-let g:ycm_server_python_interpreter='/usr/bin/python2.7'
-let g:ycm_path_to_python_interpreter ='/usr/bin/python2.7' 
-let g:ycm_python_binary_path='/usr/bin/python2.7'
-let g:ycm_confirm_extra_conf=1
-let g:ycm_min_num_of_chars_for_completion=1
-let g:ycm_cache_omnifunc=0
-let g:ycm_seed_identifiers_with_syntax=0
-let g:ycm_collect_identifiers_from_tags_files=0
+let g:pymode_rope_complete_on_dot = 1
+let g:pymode_rope_completion = 1
+let g:ycm_server_log_level = 'debug'
+let g:ycm_use_ultisnips_completer = 1
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1 
+let g:ycm_server_python_interpreter = '/usr/bin/python2.7'
+let g:ycm_path_to_python_interpreter = '/usr/bin/python2.7' 
+let g:ycm_python_binary_path = '/usr/bin/python2.7'
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_min_num_of_chars_for_completion = 1
+let g:ycm_cache_omnifunc = 0
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:syntastic_always_populate_loc_list = 0
 let g:ycm_add_preview_to_completeopt = 0
@@ -96,9 +101,6 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_filepath_completion_use_working_dir = 1
 
 
-"" HTML/CSS
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
 
 ""indentLine 缩进线颜色
 let g:indentLine_color_term = 9
@@ -116,9 +118,18 @@ set background=dark
 colorscheme solarized
 
 "airline
-let g:airline_theme= 'powerlineish'
+"let g:airline_theme= 'powerlineish'
+set laststatus=2
+set ttimeoutlen=50
+let g:airline_theme="luna"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#ycm#enabled = 1
+let g:CtrlSpaceStatuslineFunction = "airline#extensions#ctrlspace#statusline()"
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#virtualenv#enabled = 1
+let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
 map <C-k> :w<cr>:bn<cr>               "下一个文件
 map <C-j> :w<cr>:bp<cr>               "上一个文件
 
@@ -128,7 +139,7 @@ if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
     let g:ctrlp_use_caching = 0
-endif"
+endif
 
 "python with virtualenv support
 py << EOF
@@ -149,14 +160,4 @@ let g:pymode_paths = ['./',]
 map <leader>q :bwipeout __run__<cr> "由于python-mode会自动打开一个__run__缓冲区作为运行，所以设置快捷键来关闭 
 
 "jedi
-let g:jedi#force_py_version = '2.7'
-let g:jedi#popup_select_first = 1
-let g:jedi#completions_enabled = 1
-let g:jedi#auto_initialization = 1
-let g:jedi#auto_vim_configuration = 1
-let g:jedi#popup_on_dot = 1
 let g:jedi#show_call_signatures_delay = 0
-let g:jedi#use_tabs_not_buffers = 0
-let g:jedi#smart_auto_mappings = 1
-let g:jedi#use_tag_stack = 0
-

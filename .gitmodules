@@ -43,3 +43,6 @@
 [submodule "ctrlp.vim"]
 	path = ctrlp.vim
 	url = ./ctrlp.vim/
+[submodule "vim-pathogen"]
+	path = vim-pathogen
+	url = ./tmuxline.vim
