@@ -46,3 +46,9 @@
 [submodule "vim-pathogen"]
 	path = vim-pathogen
 	url = ./tmuxline.vim
+[submodule "tmuxline.vim"]
+	path = tmuxline.vim
+	url = ./tmuxline.vim
+[submodule "vim-virtualenv"]
+	path = vim-virtualenv
+	url = ./vim-virtualenv/
