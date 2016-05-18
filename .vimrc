@@ -13,9 +13,10 @@ let g:ycm_filetype_blacklist = {
       \ 'vimwiki' : 1,
       \ 'gitcommit' : 1,
       \ 'vim' : 1,
+      \ 'help' : 1,
       \}
 
-au BufNewFile,BufRead *.py
+au BufNewFile,BufRead,Filetype *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
@@ -25,11 +26,10 @@ au BufNewFile,BufRead *.py
     \ set smartindent |
     \ set autoindent |
     \ set fileformat=unix |
-    \ set tags+=./tags |
     \ set omnifunc=jedi#completions |
     \ ab .py- #!/usr/bin/python2.7 |
 
-au BufNewFile,BufRead *.js,*.html,*.css
+au BufNewFile,BufRead,Filetype *.js,*.html,*.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
@@ -39,9 +39,9 @@ au BufNewFile,BufRead *.js,*.html,*.css
 
 "" HTML/CSS
 let g:user_emmet_install_global = 0
-au BufNewFile,BufRead,FileType html,css EmmetInstall
-au BufNewFile,BufRead *.html set omnifunc=htmlcomplete#CompleteTags
-au BufNewFile,BufRead *.css set omnifunc=cssmplete#CompleteCSS
+au BufNewFile,BufRead,Filetype html,css EmmetInstall
+au BufNewFile,BufRead,Filetype *.html set omnifunc=htmlcomplete#CompleteTags
+au BufNewFile,BufRead,Filetype *.css set omnifunc=cssmplete#CompleteCSS
 
 if exists('$TMUX')
   set term=screen-256color
@@ -71,7 +71,6 @@ inoremap <C-l> <right>
 execute pathogen#infect()
 
 "YouCompleteMe
-"set omnifunc=youcompleteme#OmniComplete
 set completeopt-=preview
 let g:ycm_key_invoke_completion = '<leader><TAB>'
 let g:pymode_rope_complete_on_dot = 1
@@ -161,3 +160,4 @@ map <leader>q :bwipeout __run__<cr> "由于python-mode会自动打开一个__run
 
 "jedi
 let g:jedi#show_call_signatures_delay = 0
+let g:jedi#smart_auto_mappings = 1

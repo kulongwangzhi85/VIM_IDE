@@ -25,10 +25,13 @@
 > - 查看vim版本，并且是否支持Python
 > - 进入vim编辑器使用:version查看版本，并且确认是否支持Python2或Python3.如果不支持，请查看系统是否装有其它版本才vim
 > -  ubuntu系统执行update-alternatives --config vim,查看是否由其它版本的vim.我这系统就有好几个版本。有的支持，有的不支持
-> - 使用系统命令apt-get install 安装pathogen插件，并执行vim-addon-manager install pathogen安装到vim
+> - 安装PowerLine字体
 > - 安装后进入~/.vim/bundle/目录，执行git clone --recursive git@github.com:kulongwangzhi85/VIM_IDE.git。其中--recursive递归的意思。
 > - 执行以上命令后需进入每个插件目录，检查是否由test_requirements.txt文件，如果有需要执行sudo pip install -r test_requirements.txt,安装该插件所需的依赖包.
 > - 其中ouCompleteMe插件执行完以上步骤后，还需执行./install.sh进行安装
+
+##**待解决的问题**
+> - 编辑MarkDown是，括弧会自动多加个")"
 
 ##**使用方法**
 
