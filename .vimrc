@@ -1,7 +1,7 @@
 ""vimrc
 ""markdown
-"au BufNewFile,BufRead *.md let g:vim_markdown_conceal=0 "不要隐藏markdown文本 
-"au BufNewFile,BufRead *.md let g:vim_markdown_folding_disabled=1 "不要折叠markdown文本 
+au BufNewFile,BufRead *.md let g:vim_markdown_conceal = 0 "不要隐藏markdown文本 
+au BufNewFile,BufRead *.md let g:vim_markdown_folding_disabled = 1 "不要折叠markdown文本 
 
 let g:ycm_filetype_blacklist = {
       \ 'tagbar' : 1,
