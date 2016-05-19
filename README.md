@@ -32,9 +32,12 @@
 > - 配置.bashrc文件，添加	export PYTHONSTARTUP="$(python -m jedi repl)"	如果是其它系统，要添加到相应的bash初始化文件中
 
 ##**待解决的问题**
-> - 编辑MarkDown是，括弧会自动多加个")"
+2016年 05月 19日 星期四 10:11:16 CST
+> - 编辑MarkDown是，括弧会自动多加个")" 
+> - 对html和javascript没做什么支持
 
 ##**使用方法**
+
 
 
 
