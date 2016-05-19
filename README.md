@@ -29,7 +29,7 @@
 > - 安装后进入~/.vim/bundle/目录，执行git clone --recursive git@github.com:kulongwangzhi85/VIM_IDE.git。其中--recursive递归的意思。
 > - 执行以上命令后需进入每个插件目录，检查是否由test_requirements.txt文件，如果有需要执行sudo pip install -r test_requirements.txt,安装该插件所需的依赖包.
 > - 其中ouCompleteMe插件执行完以上步骤后，还需执行./install.sh进行安装
-> - 配置.bashrc文件，添加export PYTHONSTARTUP="$(python -m jedi repl)"。如果是其它系统，要添加到相应的bbash初始化文件中
+> - 配置.bashrc文件，添加	export PYTHONSTARTUP="$(python -m jedi repl)"	如果是其它系统，要添加到相应的bash初始化文件中
 
 ##**待解决的问题**
 > - 编辑MarkDown是，括弧会自动多加个")"
