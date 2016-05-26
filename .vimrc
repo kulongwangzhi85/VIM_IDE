@@ -1,4 +1,4 @@
-""vimrc
+""vimrc.
 ""markdown
 au BufNewFile,BufRead *.md let g:vim_markdown_conceal = 0 "不要隐藏markdown文本 
 au BufNewFile,BufRead *.md let g:vim_markdown_folding_disabled = 1 "不要折叠markdown文本 
@@ -68,7 +68,9 @@ inoremap <C-h> <left>
 inoremap <C-l> <right>
 
 ""pathogen
-execute pathogen#infect()
+call pathogen#infect()
+call pathogen#helptags()
+
 
 "YouCompleteMe
 set completeopt-=preview
@@ -84,7 +86,7 @@ let g:ycm_path_to_python_interpreter = '/usr/bin/python2.7'
 let g:ycm_python_binary_path = '/usr/bin/python2.7'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_min_num_of_chars_for_completion = 1
-let g:ycm_cache_omnifunc = 0
+let g:ycm_cache_omnifunc = 1
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
@@ -132,25 +134,18 @@ let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
 map <C-k> :w<cr>:bn<cr>               "下一个文件
 map <C-j> :w<cr>:bp<cr>               "上一个文件
 
-
-"ctrl_p 替换原来的grep查找方式，ag工具速度快
-if executable('ag')
-    set grepprg=ag\ --nogroup\ --nocolor
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-    let g:ctrlp_use_caching = 0
-endif
-
 "python with virtualenv support
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
-EOF
+"py << EOF
+"import os
+"import sys
+"if 'VIRTUAL_ENV' in os.environ:
+    "project_base_dir = os.environ['VIRTUAL_ENV']
+    "activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    "execfile(activate_this, dict(__file__=activate_this))
+"EOF
 
 "python-mode
+let g:pymode_python = 'python'
 let g:pymode_options_max_line_length = 85
 let g:pymode_run_bind = '<leader>p'
 let g:pymode_lint_cwindow = 0 "关闭python-mode附加窗口 
